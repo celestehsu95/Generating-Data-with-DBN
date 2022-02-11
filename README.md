@@ -1,7 +1,7 @@
 # Contents
-dbn_train.py is for training the dbn.
-dbn.py is the models we built.
-dbn_generate.py is for generating the images we got.
+1. dbn_train.py is for training the dbn.
+2. dbn.py is the models we built.
+3. dbn_generate.py is for generating the images we got.
 
 
 # Generating Data with DBN
