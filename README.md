@@ -1,16 +1,13 @@
+#
+Dbn_train.py is for training the dbn.
+Dbn.py is the models we built.
+Dbn_generate.py is for generating the images we got.
+
+
 # Generating Data withRBM
 The goal of this project was to construct and train a Restricted Boltzmann Machine on an insufficient/imbalanced dataset, generate new samples to augment the dataset, and observe how the augmented dataset improves the performance of classification models.
 
 # Data
-Mnist
-The MNIST database of handwritten digits has a training set of 60,000 examples, and a test set of 10,000 examples.
-The digits are size-normalized and centered in a fixed-size image.
- <img width="1233" alt="Screen Shot 2022-02-10 at 5 07 36 PM" src="https://user-images.githubusercontent.com/98995087/153525070-73d91ef9-80bd-4313-9a9b-efe3f3d08be0.png">
-
-CIFAR10
-The CIFAR-10 dataset consists of 60000 32x32 colour images in 10 classes, with 6000 images per class. 
-There are 50000 training images and 10000 test images.
-<img width="609" alt="Screen Shot 2022-02-10 at 5 38 45 PM" src="https://user-images.githubusercontent.com/98995087/153525147-d49ab029-6344-4a4e-95ab-09d4488b4a22.png">
 
 LFW Face Database
 The data set contains more than 13,000 images of faces collected from the web. Each face has been labeled with the name of the person pictured. These are some examples.
@@ -28,17 +25,14 @@ It consists of m visible units V = (V1, ..., Vm) to represent observable data an
 
 <img width="412" alt="Screen Shot 2022-02-10 at 5 35 35 PM" src="https://user-images.githubusercontent.com/98995087/153524877-3dce95c4-168b-43bc-be38-5a3216ede3e5.png">
 
+# Deep Bayesian Network
+A DBN consists of a stacked Restricted Boltzmann Machines. Each RBM’s hidden layer feeds the next RBM’s visible layer.
+Each RBM is trained one at a time, after one has completed training it initializes the next RBM with its learned weights and biases
+The training process consists of two techniques known as Gibbs Sampling and Persistent Contrastive Divergence.
+Gibbs Sampling is the process of traversing the Markov chain that the RBM consists of. 
 
 # Result
-RBM with MNIST
 
-<img width="961" alt="Screen Shot 2022-02-10 at 5 36 55 PM" src="https://user-images.githubusercontent.com/98995087/153524996-131aa4a9-99eb-40b0-9e28-e0ef44f97d1d.png">
-
-RBM with CIFAR10
-<img width="1122" alt="Screen Shot 2022-02-10 at 5 40 26 PM" src="https://user-images.githubusercontent.com/98995087/153525283-75ac85f0-7009-4e0f-9ab1-279d36ca5b0a.png">
-
-
-RBM with LFW Face Database
-<img width="1110" alt="Screen Shot 2022-02-10 at 5 41 22 PM" src="https://user-images.githubusercontent.com/98995087/153525363-c0cb0dd5-fdab-46c7-8e65-ccb291c0c724.png">
+<img width="1083" alt="Screen Shot 2022-02-10 at 10 20 26 PM" src="https://user-images.githubusercontent.com/98995087/153545931-9351ca98-cae7-4da1-a34e-c34eabe23e45.png">
 
 
