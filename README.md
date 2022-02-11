@@ -4,8 +4,8 @@ Dbn.py is the models we built.
 Dbn_generate.py is for generating the images we got.
 
 
-# Generating Data withRBM
-The goal of this project was to construct and train a Restricted Boltzmann Machine on an insufficient/imbalanced dataset, generate new samples to augment the dataset, and observe how the augmented dataset improves the performance of classification models.
+# Generating Data with DBN
+The goal of this project was to construct and train a Deep Bayesian Network on an insufficient/imbalanced dataset, generate new samples to augment the dataset, and observe how the augmented dataset improves the performance of classification models.
 
 # Data
 
